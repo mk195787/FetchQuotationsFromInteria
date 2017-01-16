@@ -1,5 +1,4 @@
 #!/bin/bash
-echo "Hello World"
 curl -vs "http://mojeinwestycje.interia.pl/gie/notgpw/full/zlec_all?sp=55&zl=A" 2>&1 |
 grep -o "[0-9,]\+\s\.\+\s[0-9]\+\s\.\+\s[0-9:]\{8\}" |
 sed -n 's/\([0-9,]\+\)\s\.*\s\([0-9]\+\).*/\1|\2/p' |
